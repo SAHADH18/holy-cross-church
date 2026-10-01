@@ -1,0 +1,272 @@
+def get_shared_header(active_page="home"):
+    is_home = active_page == "home"
+    is_about = active_page in ["history", "feast", "institutions", "administration", "mass-timing", "ministries", "convents", "priests"]
+    is_units = active_page in ["family_units", "holy_cross_unit", "st_theresa_unit", "don_bosco_unit", "assisi_unit"]
+    is_chapels = active_page == "chapels"
+    is_news = active_page == "news"
+    is_gallery = active_page == "gallery"
+    is_contact = active_page == "contact"
+    is_bulletin = active_page == "bulletin"
+    is_links = active_page == "links"
+
+    return f"""
+  <!-- Top Utility Bar (Warm Light Cream) -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Manjapra P.O., Ernakulam Dist., Kerala - 683581</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+914842692225">0484 2692225</a>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:holycrossmanjapra@gmail.com">holycrossmanjapra@gmail.com</a>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-item">
+          <span class="top-bar-badge"><i class="fa-solid fa-cross text-gold"></i> Syro-Malabar Forane Church</span>
+        </div>
+        <div class="top-bar-item">
+          <a href="parish_bulletin.html" class="top-bar-badge" style="background: var(--color-white); border-color: var(--color-gold);"><i class="fa-solid fa-book-bible text-gold"></i> Parish Bulletin</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header (Warm Translucent Ivory / Cream) -->
+  <header class="header-main">
+    <div class="container nav-wrapper">
+      <!-- Church Brand -->
+      <a href="index.html" class="church-brand" title="Holy Cross Forane Church, Manjapra">
+        <img src="images/logos/small-logo-default.png" alt="Holy Cross Church Crest" class="church-logo-img" onerror="this.src='images/favicon.png'">
+        <div class="church-brand-text">
+          <span class="brand-title">Holy Cross Forane Church</span>
+          <span class="brand-subtitle">Manjapra &bull; Estd. 1568</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link {'active' if is_home else ''}">Home</a>
+        </div>
+        <div class="nav-item">
+          <a href="history.html" class="nav-link {'active' if is_about else ''}">
+            About <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item {'active' if active_page == 'history' else ''}"><a href="history.html"><i class="fa-solid fa-landmark text-gold" style="width: 18px;"></i> History</a></div>
+            <div class="dropdown-item {'active' if active_page == 'feast' else ''}"><a href="annual_feast.html"><i class="fa-solid fa-cake-candles text-gold" style="width: 18px;"></i> Annual Feast</a></div>
+            <div class="dropdown-item {'active' if active_page == 'institutions' else ''}"><a href="institutions.html"><i class="fa-solid fa-school text-gold" style="width: 18px;"></i> Institutions</a></div>
+            <div class="dropdown-item {'active' if active_page == 'administration' else ''}"><a href="administration.html"><i class="fa-solid fa-users-gear text-gold" style="width: 18px;"></i> Administration</a></div>
+            <div class="dropdown-item {'active' if active_page == 'mass-timing' else ''}"><a href="mass-timing.html"><i class="fa-solid fa-clock text-gold" style="width: 18px;"></i> Mass Timings</a></div>
+            <div class="dropdown-item {'active' if active_page == 'ministries' else ''}"><a href="ministries.html"><i class="fa-solid fa-hands-praying text-gold" style="width: 18px;"></i> Ministries</a></div>
+            <div class="dropdown-item {'active' if active_page == 'convents' else ''}"><a href="convents.html"><i class="fa-solid fa-house-chimney-window text-gold" style="width: 18px;"></i> Convents</a></div>
+            <div class="dropdown-item {'active' if active_page == 'priests' else ''}"><a href="Priest&Religious-1.html"><i class="fa-solid fa-cross text-gold" style="width: 18px;"></i> Priest &amp; Religious</a></div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="family_units.html" class="nav-link {'active' if is_units else ''}">Family Units</a>
+        </div>
+        <div class="nav-item">
+          <a href="chapels.html" class="nav-link {'active' if is_chapels else ''}">Chapels</a>
+        </div>
+        <div class="nav-item">
+          <a href="news.html" class="nav-link {'active' if is_news else ''}">News</a>
+        </div>
+        <div class="nav-item">
+          <a href="gallery.html" class="nav-link {'active' if is_gallery else ''}">Gallery</a>
+        </div>
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link {'active' if is_contact else ''}">Contact Us</a>
+        </div>
+      </nav>
+
+      <!-- Action Button & Mobile Toggle -->
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <a href="mass-timing.html" class="btn btn-outline-gold btn-sm" style="display: none;" id="nav-timing-btn">Mass Timings</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="church-brand">
+        <img src="images/logos/small-logo-default.png" alt="Holy Cross Church" class="church-logo-img" style="width: 42px; height: 42px;">
+        <div class="church-brand-text">
+          <span class="brand-title" style="font-size: 1.12rem;">Holy Cross Church</span>
+          <span class="brand-subtitle" style="font-size: 0.7rem;">Manjapra</span>
+        </div>
+      </div>
+      <button class="mobile-close-btn" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link {'active' if is_home else ''}">Home</a></li>
+      <li class="mobile-nav-item has-dropdown">
+        <a href="#" class="mobile-nav-link {'active' if is_about else ''}">
+          About Church <i class="fa-solid fa-chevron-down text-gold" style="font-size: 0.8rem;"></i>
+        </a>
+        <div class="mobile-dropdown-menu">
+          <div class="mobile-dropdown-item {'active' if active_page == 'history' else ''}"><a href="history.html"><i class="fa-solid fa-landmark text-gold"></i> History</a></div>
+          <div class="mobile-dropdown-item {'active' if active_page == 'feast' else ''}"><a href="annual_feast.html"><i class="fa-solid fa-cake-candles text-gold"></i> Annual Feast</a></div>
+          <div class="mobile-dropdown-item {'active' if active_page == 'institutions' else ''}"><a href="institutions.html"><i class="fa-solid fa-school text-gold"></i> Institutions</a></div>
+          <div class="mobile-dropdown-item {'active' if active_page == 'administration' else ''}"><a href="administration.html"><i class="fa-solid fa-users-gear text-gold"></i> Administration</a></div>
+          <div class="mobile-dropdown-item {'active' if active_page == 'mass-timing' else ''}"><a href="mass-timing.html"><i class="fa-solid fa-clock text-gold"></i> Mass Timings</a></div>
+          <div class="mobile-dropdown-item {'active' if active_page == 'ministries' else ''}"><a href="ministries.html"><i class="fa-solid fa-hands-praying text-gold"></i> Ministries</a></div>
+          <div class="mobile-dropdown-item {'active' if active_page == 'convents' else ''}"><a href="convents.html"><i class="fa-solid fa-house-chimney-window text-gold"></i> Convents</a></div>
+          <div class="mobile-dropdown-item {'active' if active_page == 'priests' else ''}"><a href="Priest&Religious-1.html"><i class="fa-solid fa-cross text-gold"></i> Priest &amp; Religious</a></div>
+        </div>
+      </li>
+      <li class="mobile-nav-item"><a href="family_units.html" class="mobile-nav-link {'active' if is_units else ''}">Family Units</a></li>
+      <li class="mobile-nav-item"><a href="chapels.html" class="mobile-nav-link {'active' if is_chapels else ''}">Chapels</a></li>
+      <li class="mobile-nav-item"><a href="news.html" class="mobile-nav-link {'active' if is_news else ''}">News</a></li>
+      <li class="mobile-nav-item"><a href="gallery.html" class="mobile-nav-link {'active' if is_gallery else ''}">Gallery</a></li>
+      <li class="mobile-nav-item"><a href="parish_bulletin.html" class="mobile-nav-link {'active' if is_bulletin else ''}">Parish Bulletin</a></li>
+      <li class="mobile-nav-item"><a href="useful-links.html" class="mobile-nav-link {'active' if is_links else ''}">Useful Links</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link {'active' if is_contact else ''}">Contact Us</a></li>
+    </ul>
+
+    <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--color-gold-border);">
+      <div style="color: var(--color-text-muted); font-size: 0.88rem; margin-bottom: 10px;">
+        <i class="fa-solid fa-phone text-gold"></i> 0484 2692225
+      </div>
+      <div style="color: var(--color-text-muted); font-size: 0.88rem; margin-bottom: 18px;">
+        <i class="fa-solid fa-envelope text-gold"></i> holycrossmanjapra@gmail.com
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Submit Prayer Request</a>
+    </div>
+  </aside>
+"""
+
+def get_shared_footer():
+    return """
+  <!-- Deep Brown Footer (#211A15) - The Primary Dark Section -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Church Identity -->
+        <div class="footer-church-info">
+          <div class="church-brand" style="margin-bottom: 18px;">
+            <img src="images/logos/small-logo-default.png" alt="Holy Cross Church Logo" class="church-logo-img" style="width: 48px; height: 48px;" onerror="this.src='images/favicon.png'">
+            <div class="church-brand-text">
+              <span class="brand-title" style="font-size: 1.25rem; color: var(--color-champagne-primary);">Holy Cross Forane Church</span>
+              <span class="brand-subtitle" style="color: var(--color-gold-light);">Manjapra &bull; Marian Pilgrim Center</span>
+            </div>
+          </div>
+          <p>
+            Holy Cross Forane Church, Manjapra is a revered and historic Catholic pilgrimage center in Kerala, established in 1568 AD under the Major Archdiocese of Ernakulam-Angamaly.
+          </p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="mass-timing.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-clock"></i> Mass Timings</a>
+            <a href="contact.html" class="btn btn-outline-gold btn-sm" style="color: var(--color-champagne-primary); border-color: var(--color-gold);"><i class="fa-solid fa-hands-praying"></i> Prayer Request</a>
+          </div>
+          <div class="footer-social-links">
+            <a href="https://www.facebook.com/holycrossforanechurchmanjapra" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/919495072573" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+            <li><a href="history.html"><i class="fa-solid fa-chevron-right"></i> Church History</a></li>
+            <li><a href="annual_feast.html"><i class="fa-solid fa-chevron-right"></i> Annual Feast</a></li>
+            <li><a href="mass-timing.html"><i class="fa-solid fa-chevron-right"></i> Mass Schedule</a></li>
+            <li><a href="parish_bulletin.html"><i class="fa-solid fa-chevron-right"></i> Parish Bulletin</a></li>
+            <li><a href="useful-links.html"><i class="fa-solid fa-chevron-right"></i> Useful Links</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Parish Community -->
+        <div>
+          <h4 class="footer-col-title">Parish Community</h4>
+          <ul class="footer-links">
+            <li><a href="administration.html"><i class="fa-solid fa-chevron-right"></i> Administration</a></li>
+            <li><a href="Priest&Religious-1.html"><i class="fa-solid fa-chevron-right"></i> Priests &amp; Religious</a></li>
+            <li><a href="family_units.html"><i class="fa-solid fa-chevron-right"></i> Family Units (35 Wards)</a></li>
+            <li><a href="ministries.html"><i class="fa-solid fa-chevron-right"></i> Parish Ministries</a></li>
+            <li><a href="institutions.html"><i class="fa-solid fa-chevron-right"></i> Institutions &amp; Schools</a></li>
+            <li><a href="convents.html"><i class="fa-solid fa-chevron-right"></i> Religious Convents</a></li>
+            <li><a href="chapels.html"><i class="fa-solid fa-chevron-right"></i> Chapels</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Photo Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Information -->
+        <div>
+          <h4 class="footer-col-title">Parish Office</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong style="color: var(--color-champagne-primary);">Holy Cross Forane Church</strong><br>
+              Manjapra P.O., Ernakulam District<br>
+              Kerala, India - PIN: 683581
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <a href="tel:+914842692225">0484 2692225</a> / <a href="tel:+919495072573">+91 9495072573</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <a href="mailto:holycrossmanjapra@gmail.com">holycrossmanjapra@gmail.com</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <strong>Office Hours:</strong><br>
+              Mon - Sat: 9:00 AM - 1:00 PM, 2:00 PM - 5:00 PM
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>Holy Cross Forane Church, Manjapra</strong>. All Rights Reserved.
+        </div>
+        <span class="powered-by">
+          Powered by
+          <a href="https://cryoflametechnologies.com/" target="_blank" rel="noopener noreferrer">
+            Cryoflame Technologies LLP
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919495072573" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+"""
