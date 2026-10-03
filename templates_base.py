@@ -1,4 +1,4 @@
-﻿def get_shared_header(active_page="home"):
+def get_shared_header(active_page="home"):
     is_home = active_page == "home"
     is_about = active_page in ["history", "feast", "institutions", "administration", "mass-timing", "ministries", "convents", "priests"]
     is_units = active_page in ["family_units", "holy_cross_unit", "st_theresa_unit", "don_bosco_unit", "assisi_unit"]
@@ -16,11 +16,11 @@
       <div class="top-bar-left">
         <div class="top-bar-item">
           <i class="fa-solid fa-location-dot"></i>
-          <span>Manjapra P.O., Ernakulam Dist., Kerala - 683581</span>
+          <span>Holy Cross Forane Church, Manjapra, Ernakulam, Kerala, India, PIN:683581</span>
         </div>
         <div class="top-bar-item">
           <i class="fa-solid fa-phone"></i>
-          <a href="tel:+914842692225">0484 2692225</a>
+          <a href="tel:+919495072573">+91 9495072573</a>
         </div>
         <div class="top-bar-item">
           <i class="fa-solid fa-envelope"></i>
@@ -29,7 +29,7 @@
       </div>
       <div class="top-bar-right">
         <div class="top-bar-item">
-          <span class="top-bar-badge"><i class="fa-solid fa-cross text-gold"></i> Syro-Malabar Forane Church</span>
+          <span class="top-bar-badge"><i class="fa-solid fa-cross text-gold"></i> Marian Pilgrim Center</span>
         </div>
         <div class="top-bar-item">
           <a href="parish_bulletin.html" class="top-bar-badge" style="background: var(--color-white); border-color: var(--color-gold);"><i class="fa-solid fa-book-bible text-gold"></i> Parish Bulletin</a>
@@ -161,7 +161,7 @@ def get_shared_footer():
             <img src="images/logos/small-logo-default.png" alt="Holy Cross Church Logo" class="church-logo-img" style="width: 48px; height: 48px;" onerror="this.src='images/favicon.png'">
             <div class="church-brand-text">
               <span class="brand-title" style="font-size: 1.25rem; color: var(--color-champagne-primary);">Holy Cross Forane Church</span>
-              <span class="brand-subtitle" style="color: var(--color-gold-light);">Manjapra &bull; Marian Pilgrim Center</span>
+              <span class="brand-subtitle" style="color: var(--color-gold-light);">Manjapra</span>
             </div>
           </div>
           <p>

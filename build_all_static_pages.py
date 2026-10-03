@@ -8,8 +8,8 @@ def render_html_page(filename, title, active_nav, body_content, meta_desc=""):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
-  <meta name="description" content="{meta_desc or 'Holy Cross Forane Church, Manjapra - Historic Marian Pilgrim Center in Kerala under the Major Archdiocese of Ernakulam-Angamaly.'}">
-  <meta name="keywords" content="Holy Cross Church, Manjapra Church, Marian Pilgrim Center, Syro Malabar Church, Forane Church Manjapra, Kerala Catholic Church">
+  <meta name="description" content="{meta_desc or 'Holy Cross Forane Church, Manjapra in Kerala under the Major Archdiocese of Ernakulam-Angamaly.'}">
+  <meta name="keywords" content="Holy Cross Church, Manjapra Church, Syro Malabar Church, Forane Church Manjapra, Kerala Catholic Church">
   
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/png" href="images/favicon.png">
@@ -64,7 +64,7 @@ def build_index():
       </div>
 
       <p style="font-size: 1.2rem; max-width: 720px; margin: 0 auto 34px; color: var(--color-champagne-light); line-height: 1.7; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">
-        A renowned Marian Pilgrim Center and historic spiritual sanctuary dedicated to the Exaltation of the Holy Cross.
+        A renowned  and historic spiritual sanctuary dedicated to the Exaltation of the Holy Cross.
       </p>
 
       <div class="hero-actions">
@@ -226,7 +226,7 @@ def build_index():
             <div class="heritage-panel">
               <div class="heritage-badge">
                 <span class="badge-accent">✦</span>
-                <span class="badge-year">Marian Pilgrim Center</span>
+                <span class="badge-year"></span>
                 <span class="badge-accent">✦</span>
               </div>
               <h3 class="heritage-panel-title">Devotion to Mother of Perpetual Help</h3>
@@ -237,7 +237,7 @@ def build_index():
           </div>
 
           <div class="heritage-timeline-center">
-            <div class="heritage-node" title="Marian Pilgrim Center"></div>
+            <div class="heritage-node" title=""></div>
           </div>
 
           <div class="heritage-timeline-media-col">
@@ -577,7 +577,7 @@ def build_index():
     </div>
   </section>
 """
-    render_html_page("index.html", "Holy Cross Forane Church | Manjapra - Marian Pilgrim Center", "home", body)
+    render_html_page("index.html", "Holy Cross Forane Church | Manjapra", "home", body)
 
 # ==========================================
 # 2. HISTORY.HTML
