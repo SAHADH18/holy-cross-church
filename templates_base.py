@@ -1,4 +1,4 @@
-def get_shared_header(active_page="home"):
+﻿def get_shared_header(active_page="home"):
     is_home = active_page == "home"
     is_about = active_page in ["history", "feast", "institutions", "administration", "mass-timing", "ministries", "convents", "priests"]
     is_units = active_page in ["family_units", "holy_cross_unit", "st_theresa_unit", "don_bosco_unit", "assisi_unit"]
@@ -24,7 +24,7 @@ def get_shared_header(active_page="home"):
         </div>
         <div class="top-bar-item">
           <i class="fa-solid fa-envelope"></i>
-          <a href="mailto:holycrossmanjapra@gmail.com">holycrossmanjapra@gmail.com</a>
+          <a href="mailto:churchmanjapra@gmail.com">churchmanjapra@gmail.com</a>
         </div>
       </div>
       <div class="top-bar-right">
@@ -142,7 +142,7 @@ def get_shared_header(active_page="home"):
         <i class="fa-solid fa-phone text-gold"></i> 0484 2692225
       </div>
       <div style="color: var(--color-text-muted); font-size: 0.88rem; margin-bottom: 18px;">
-        <i class="fa-solid fa-envelope text-gold"></i> holycrossmanjapra@gmail.com
+        <i class="fa-solid fa-envelope text-gold"></i> churchmanjapra@gmail.com
       </div>
       <a href="contact.html" class="btn btn-primary" style="width: 100%;">Submit Prayer Request</a>
     </div>
@@ -229,7 +229,7 @@ def get_shared_footer():
           <div class="footer-contact-item">
             <i class="fa-solid fa-envelope"></i>
             <div>
-              <a href="mailto:holycrossmanjapra@gmail.com">holycrossmanjapra@gmail.com</a>
+              <a href="mailto:churchmanjapra@gmail.com">churchmanjapra@gmail.com</a>
             </div>
           </div>
           <div class="footer-contact-item">

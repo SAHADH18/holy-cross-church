@@ -1,4 +1,4 @@
-import os
+﻿import os
 from templates_base import get_shared_header, get_shared_footer
 
 def render_html_page(filename, title, active_nav, body_content, meta_desc=""):
@@ -560,7 +560,7 @@ def build_index():
               <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
               <div class="contact-info-text">
                 <h4>Email</h4>
-                <p><a href="mailto:holycrossmanjapra@gmail.com">holycrossmanjapra@gmail.com</a></p>
+                <p><a href="mailto:churchmanjapra@gmail.com">churchmanjapra@gmail.com</a></p>
               </div>
             </div>
 
@@ -2369,7 +2369,7 @@ def build_contact():
           <div class="contact-info-icon" style="margin: 0 auto 16px;"><i class="fa-solid fa-envelope"></i></div>
           <h4 style="font-size: 1.2rem; color: var(--color-brown-dark); margin-bottom: 8px;">Email Address</h4>
           <p style="color: var(--color-text-muted);"><a href="mailto:churchmanjapra@gmail.com">churchmanjapra@gmail.com</a></p>
-          <p style="color: var(--color-text-muted);"><a href="mailto:holycrossmanjapra@gmail.com">holycrossmanjapra@gmail.com</a></p>
+          <p style="color: var(--color-text-muted);"><a href="mailto:churchmanjapra@gmail.com">churchmanjapra@gmail.com</a></p>
         </div>
       </div>
     </div>
