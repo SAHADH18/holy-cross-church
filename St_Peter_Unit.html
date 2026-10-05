@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+
   <!-- Top Utility Bar (Warm Light Cream) -->
   <div class="top-bar">
     <div class="container top-bar-inner">
@@ -32,9 +34,6 @@
         </div>
       </div>
       <div class="top-bar-right">
-        <div class="top-bar-item">
-          <span class="top-bar-badge"><i class="fa-solid fa-cross text-gold"></i> Marian Pilgrim Center</span>
-        </div>
         <div class="top-bar-item">
           <a href="parish_bulletin.html" class="top-bar-badge" style="background: var(--color-white); border-color: var(--color-gold);"><i class="fa-solid fa-book-bible text-gold"></i> Parish Bulletin</a>
         </div>
@@ -157,7 +156,7 @@
   <section class="page-hero" style="background-image: url('images/bg-breadcrumbs.jpg');">
     <div class="page-hero-overlay"></div>
     <div class="container page-hero-content">
-      <span class="page-hero-tag"><i class="fa-solid fa-cross text-gold"></i> Family Unit &bull; Unit - 25</span>
+      <span class="page-hero-tag"><i class="fa-solid fa-cross text-gold"></i> Family Unit &bull; <span class="unit-num-nobr">Unit - 25</span></span>
       <h1 class="page-hero-title">St. Peter Unit</h1>
       <div class="gold-divider"><span class="cross-symbol">✝</span></div>
       <div class="breadcrumbs">
@@ -171,11 +170,11 @@
   </section>
 
   <!-- Unit Details Main Section -->
-  <section class="section bg-cream" style="padding-top: 50px; padding-bottom: 70px;">
-    <div class="container">
+  <section class="section bg-cream unit-detail-section" style="padding-top: 50px; padding-bottom: 70px;">
+    <div class="container unit-detail-container">
       
       <!-- Back Link & Header info -->
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; flex-wrap: wrap; gap: 14px;">
+      <div class="unit-top-actions" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; flex-wrap: wrap; gap: 14px;">
         <a href="family_units.html" class="btn btn-outline-gold btn-sm">
           <i class="fa-solid fa-arrow-left"></i> Back to Family Units Directory
         </a>
@@ -192,16 +191,16 @@
           </div>
           <div style="text-align: center; margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--color-border-warm);">
             <h4 style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--color-brown-dark); margin: 0;">St. Peter Unit</h4>
-            <span style="font-size: 0.88rem; color: var(--color-gold-muted); font-weight: 600;">യൂണിറ്റ് - 25 &bull; സെന്റ് പീറ്റർ കുടുംബ യൂണിറ്റ്</span>
+            <span class="unit-card-subtitle"><span class="unit-num-nobr">യൂണിറ്റ് - 25</span> &bull; സെന്റ് പീറ്റർ കുടുംബ യൂണിറ്റ്</span>
           </div>
         </div>
 
         <div>
           
         <div class="unit-committee-box">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+          <div class="unit-committee-header">
             <span class="section-tag" style="margin-bottom: 0;"><i class="fa-solid fa-users-gear text-gold"></i> ഭരണസമിതി</span>
-            <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-gold-muted); background: var(--color-champagne-primary); padding: 4px 12px; border-radius: 20px; border: 1px solid var(--color-gold-border);">യൂണിറ്റ് - 25</span>
+            <span class="unit-committee-pill">യൂണിറ്റ് - 25</span>
           </div>
           <h3 style="font-family: var(--font-serif); font-size: 1.55rem; color: var(--color-brown-dark); margin-bottom: 12px;">Unit Executive Committee</h3>
           <div class="gold-divider" style="justify-content: flex-start; margin-left: 0; margin-bottom: 16px;"><span class="cross-symbol">✝</span></div>
@@ -242,15 +241,12 @@
         <div class="unit-members-header">
           <div>
             <div class="section-tag" style="margin-bottom: 4px;"><i class="fa-solid fa-users text-gold"></i> കുടുംബാംഗങ്ങൾ</div>
-            <h3 style="font-family: var(--font-serif); font-size: 1.95rem; color: var(--color-brown-dark); margin: 0;">
-              Unit Members Directory (48 കുടുംബങ്ങൾ)
+            <h3 class="unit-members-title">
+              <span class="unit-members-title-text">Unit Members Directory</span>
+              <span class="unit-member-count">(48 കുടുംബങ്ങൾ)</span>
             </h3>
           </div>
-          <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
-            <div class="unit-search-bar">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" id="memberSearch" placeholder="Search member name or phone..." onkeyup="filterMembers()">
-            </div>
+          <div>
             <a href="family_units.html" class="btn btn-outline-gold btn-sm">
               <i class="fa-solid fa-arrow-left"></i> All Family Units
             </a>
@@ -270,242 +266,242 @@
               <tr class="member-row">
                 <td class="member-slno">1</td>
                 <td class="member-name">B¨m­n tPmk^v t{Xkym½</td>
-                <td class="member-phone"><a href="tel:04842692063"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> 2692063</a></td>
+                <td class="member-phone"><a href="tel:04842692063"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> 2692063</a></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">2</td>
                 <td class="member-name">B¨m­n ]utem Gey</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">3</td>
                 <td class="member-name">Bep¡ hÀKokv tacn</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">4</td>
                 <td class="member-name">IÃd-bv¡Â tPmbn</td>
-                <td class="member-phone"><a href="tel:04842692763"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> 2692763</a></td>
+                <td class="member-phone"><a href="tel:04842692763"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> 2692763</a></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">5</td>
                 <td class="member-name">IÃd-bv¡Â tPmkv</td>
-                <td class="member-phone"><a href="tel:04842691485"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> 2691485</a></td>
+                <td class="member-phone"><a href="tel:04842691485"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> 2691485</a></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">6</td>
                 <td class="member-name">Inep-¡³ ]m¸p tPmkv</td>
-                <td class="member-phone"><a href="tel:04842690311"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> 2690311</a></td>
+                <td class="member-phone"><a href="tel:04842690311"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> 2690311</a></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">7</td>
                 <td class="member-name">Inep¡³ ]utemkv</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">8</td>
                 <td class="member-name">Inep¡³ hdoXv tUhnkv</td>
-                <td class="member-phone"><a href="tel:04842691276"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> 2691276</a></td>
+                <td class="member-phone"><a href="tel:04842691276"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> 2691276</a></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">9</td>
                 <td class="member-name">Inep¡³ hdoXv tPmk^v</td>
-                <td class="member-phone"><a href="tel:04842691123"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> 2691123</a></td>
+                <td class="member-phone"><a href="tel:04842691123"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> 2691123</a></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">10</td>
                 <td class="member-name">Ing-t¡-¡päv ]utemkv</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">11</td>
                 <td class="member-name">tIme-t©cn tXmakv hÀKokv</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">12</td>
                 <td class="member-name">tImhm«v X¨nÂ s]mdn©p hÀKokv</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">13</td>
                 <td class="member-name">Nnd-¸p-d¯v A{_lmw amXyp</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">14</td>
                 <td class="member-name">Xncp-X-\-¯nÂ ]utemkv adn-bm½</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">15</td>
                 <td class="member-name">Xncp-X-\-¯nÂ Ipcy-¸³</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">16</td>
                 <td class="member-name">Xncp-X-\-¯nÂ Ipªn ]utem</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">17</td>
                 <td class="member-name">Xp¸-¯n- ]m-em«n tZÊn-¡p«n t{Xkym½</td>
-                <td class="member-phone"><a href="tel:04842690078"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> 2690078</a></td>
+                <td class="member-phone"><a href="tel:04842690078"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> 2690078</a></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">18</td>
                 <td class="member-name">s\än¡m-S³ hdoXv {^m³knkv</td>
-                <td class="member-phone"><a href="tel:04842692114"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> 2692114</a></td>
+                <td class="member-phone"><a href="tel:04842692114"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> 2692114</a></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">19</td>
                 <td class="member-name">s\än¡m-S³ hdoXv tZh-Ên-¡p«n</td>
-                <td class="member-phone"><a href="tel:04842691579"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> 2691579</a></td>
+                <td class="member-phone"><a href="tel:04842691579"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> 2691579</a></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">20</td>
                 <td class="member-name">s\än¡m-S³ ]utemkv tPmjn</td>
-                <td class="member-phone"><a href="tel:04842690177"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> 2690177</a></td>
+                <td class="member-phone"><a href="tel:04842690177"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> 2690177</a></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">21</td>
                 <td class="member-name">s\än¡m-S³ s]mdn©p ]utemkv</td>
-                <td class="member-phone"><a href="tel:04842690177"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> 2690177</a></td>
+                <td class="member-phone"><a href="tel:04842690177"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> 2690177</a></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">22</td>
                 <td class="member-name">s\än-¡m-S³ ]utemkv _nPp</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">23</td>
                 <td class="member-name">s\än-¡m-S³ sdPn</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">24</td>
                 <td class="member-name">]d¸nÅn sPbnwkv</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">25</td>
                 <td class="member-name">]m-Wm«v C«oc Ceym-¡p«n</td>
-                <td class="member-phone"><a href="tel:04842692775"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> 2692775</a></td>
+                <td class="member-phone"><a href="tel:04842692775"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> 2692775</a></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">26</td>
                 <td class="member-name">]pfn-bv¡Â ]t{Xmkv tPmWn</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">27</td>
                 <td class="member-name">]qtWmfn tXmakv</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">28</td>
                 <td class="member-name">s]cn-§m-S³ {^m³knkv</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">29</td>
                 <td class="member-name">amfn-tb-¡Â Ipª-hc t{Xky</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">30</td>
                 <td class="member-name">apf-h-cn-¡Â tPmkv</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">31</td>
                 <td class="member-name">ssa¸m³ hÀ¡n _mÌn³</td>
-                <td class="member-phone"><a href="tel:04842692777"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> 2692777</a></td>
+                <td class="member-phone"><a href="tel:04842692777"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> 2692777</a></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">32</td>
                 <td class="member-name">ssa¸m³ tPmk^v tPmWn</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">33</td>
                 <td class="member-name">ssa¸m³ ]t{Xmkv hÀKokv</td>
-                <td class="member-phone"><a href="tel:04842690301"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> 2690301</a></td>
+                <td class="member-phone"><a href="tel:04842690301"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> 2690301</a></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">34</td>
                 <td class="member-name">ssa¸m³ hÀ¡n tXmakv</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">35</td>
                 <td class="member-name">ssa¸m³ ]utem Hutk^v</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">36</td>
                 <td class="member-name">ssa¸m³ ]utem tPmÀÖv</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">37</td>
                 <td class="member-name">ssa¸m³ ]t{Xmkv Xcnb³</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">38</td>
                 <td class="member-name">ssa¸m³ hÀKokv</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">39</td>
                 <td class="member-name">ssa¸m³ s_¶n</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">40</td>
                 <td class="member-name">ssa¸m³ hÀKokv</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">41</td>
                 <td class="member-name">ssa¸m³ tZhÊn-¡p«n</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">42</td>
                 <td class="member-name">ssa¸m³ tPmkv hnÂk³</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">43</td>
                 <td class="member-name">ssa¸m³ Nmt¡m-¨³</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">44</td>
                 <td class="member-name">ssa¸m³ jntPm t]mÄ</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">45</td>
                 <td class="member-name">ssa¸m³ A¶-¡p«n tPmkv</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">46</td>
                 <td class="member-name">ssa¸m³ tPmkv jmP³</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">47</td>
                 <td class="member-name">shÅm-«p-IpSn tPmk^v tPmkv</td>
-                <td class="member-phone"><a href="tel:04842690933"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> 2690933</a></td>
+                <td class="member-phone"><a href="tel:04842690933"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> 2690933</a></td>
               </tr>
               <tr class="member-row">
                 <td class="member-slno">48</td>
                 <td class="member-name">ssa¸m³ ]utem ]utemkv</td>
-                <td class="member-phone"><span style="color: var(--color-text-muted);">—</span></td>
+                <td class="member-phone"><span class="member-no-phone" style="color: var(--color-text-muted);">—</span></td>
               </tr>
             </tbody>
           </table>
@@ -514,7 +510,7 @@
 
 
       <!-- Quick Access Cards -->
-      <div style="margin-top: 60px;">
+      <div class="unit-quick-nav" style="margin-top: 60px;">
         <div class="section-header text-center" style="margin-bottom: 28px;">
           <div class="section-tag"><i class="fa-solid fa-star text-gold"></i> വേഗത്തിലുള്ള ലിങ്കുകൾ</div>
           <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-brown-dark);">Quick Navigation</h3>
@@ -593,7 +589,7 @@
           <ul class="footer-links">
             <li><a href="administration.html"><i class="fa-solid fa-chevron-right"></i> Administration</a></li>
             <li><a href="Priest&Religious-1.html"><i class="fa-solid fa-chevron-right"></i> Priests &amp; Religious</a></li>
-            <li><a href="family_units.html"><i class="fa-solid fa-chevron-right"></i> Family Units (35 Wards)</a></li>
+            <li><a href="family_units.html"><i class="fa-solid fa-chevron-right"></i> Family Units</a></li>
             <li><a href="ministries.html"><i class="fa-solid fa-chevron-right"></i> Parish Ministries</a></li>
             <li><a href="institutions.html"><i class="fa-solid fa-chevron-right"></i> Institutions &amp; Schools</a></li>
             <li><a href="convents.html"><i class="fa-solid fa-chevron-right"></i> Religious Convents</a></li>
@@ -663,23 +659,5 @@
   <!-- JavaScript -->
   <script src="js/main.js"></script>
 
-
-  <script>
-    function filterMembers() {
-      var input = document.getElementById("memberSearch");
-      var filter = input.value.toUpperCase();
-      var table = document.getElementById("membersTable");
-      var tr = table.getElementsByClassName("member-row");
-
-      for (var i = 0; i < tr.length; i++) {
-        var text = tr[i].textContent || tr[i].innerText;
-        if (text.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
-    }
-  </script>
 </body>
 </html>

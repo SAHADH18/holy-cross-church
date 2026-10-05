@@ -332,9 +332,9 @@ def generate_unit_html(filename, meta, parsed_data):
     if committee_rows:
         committee_html = f"""
         <div class="unit-committee-box">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+          <div class="unit-committee-header">
             <span class="section-tag" style="margin-bottom: 0;"><i class="fa-solid fa-users-gear text-gold"></i> ഭരണസമിതി</span>
-            <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-gold-muted); background: var(--color-champagne-primary); padding: 4px 12px; border-radius: 20px; border: 1px solid var(--color-gold-border);">{ml_num}</span>
+            <span class="unit-committee-pill">{ml_num}</span>
           </div>
           <h3 style="font-family: var(--font-serif); font-size: 1.55rem; color: var(--color-brown-dark); margin-bottom: 12px;">Unit Executive Committee</h3>
           <div class="gold-divider" style="justify-content: flex-start; margin-left: 0; margin-bottom: 16px;"><span class="cross-symbol">✝</span></div>
@@ -355,7 +355,7 @@ def generate_unit_html(filename, meta, parsed_data):
     else:
         committee_html = f"""
         <div class="unit-committee-box">
-          <div class="section-tag"><i class="fa-solid fa-people-roof text-gold"></i> {ml_num}</div>
+          <div class="section-tag"><i class="fa-solid fa-people-roof text-gold"></i> <span class="unit-num-nobr">{ml_num}</span></div>
           <h3 style="font-family: var(--font-serif); font-size: 1.55rem; color: var(--color-brown-dark); margin-bottom: 12px;">{full_display_title}</h3>
           <div class="gold-divider" style="justify-content: flex-start; margin-left: 0; margin-bottom: 16px;"><span class="cross-symbol">✝</span></div>
           <p style="color: var(--color-brown-dark); line-height: 1.8; font-size: 1.05rem;">
@@ -373,15 +373,12 @@ def generate_unit_html(filename, meta, parsed_data):
         <div class="unit-members-header">
           <div>
             <div class="section-tag" style="margin-bottom: 4px;"><i class="fa-solid fa-users text-gold"></i> കുടുംബാംഗങ്ങൾ</div>
-            <h3 style="font-family: var(--font-serif); font-size: 1.95rem; color: var(--color-brown-dark); margin: 0;">
-              Unit Members Directory ({len(member_rows)} കുടുംബങ്ങൾ)
+            <h3 class="unit-members-title">
+              <span class="unit-members-title-text">Unit Members Directory</span>
+              <span class="unit-member-count">({len(member_rows)} കുടുംബങ്ങൾ)</span>
             </h3>
           </div>
-          <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
-            <div class="unit-search-bar">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" id="memberSearch" placeholder="Search member name or phone..." onkeyup="filterMembers()">
-            </div>
+          <div>
             <a href="family_units.html" class="btn btn-outline-gold btn-sm">
               <i class="fa-solid fa-arrow-left"></i> All Family Units
             </a>
@@ -412,9 +409,9 @@ def generate_unit_html(filename, meta, parsed_data):
                     tel_href = f"0484{tel_clean}"
                 else:
                     tel_href = tel_clean
-                ph_html = f'<a href="tel:{tel_href}"><i class="fa-solid fa-phone text-gold" style="font-size: 0.8rem;"></i> {html.escape(ph)}</a>'
+                ph_html = f'<a href="tel:{tel_href}"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> {html.escape(ph)}</a>'
             else:
-                ph_html = '<span style="color: var(--color-text-muted);">—</span>'
+                ph_html = '<span class="member-no-phone" style="color: var(--color-text-muted);">—</span>'
 
             members_html += f"""              <tr class="member-row">
                 <td class="member-slno">{sl}</td>
@@ -469,7 +466,7 @@ def generate_unit_html(filename, meta, parsed_data):
   <section class="page-hero" style="background-image: url('images/bg-breadcrumbs.jpg');">
     <div class="page-hero-overlay"></div>
     <div class="container page-hero-content">
-      <span class="page-hero-tag"><i class="fa-solid fa-cross text-gold"></i> Family Unit &bull; Unit - {unit_num}</span>
+      <span class="page-hero-tag"><i class="fa-solid fa-cross text-gold"></i> Family Unit &bull; <span class="unit-num-nobr">Unit - {unit_num}</span></span>
       <h1 class="page-hero-title">{en_name}</h1>
       <div class="gold-divider"><span class="cross-symbol">✝</span></div>
       <div class="breadcrumbs">
@@ -483,11 +480,11 @@ def generate_unit_html(filename, meta, parsed_data):
   </section>
 
   <!-- Unit Details Main Section -->
-  <section class="section bg-cream" style="padding-top: 50px; padding-bottom: 70px;">
-    <div class="container">
+  <section class="section bg-cream unit-detail-section" style="padding-top: 50px; padding-bottom: 70px;">
+    <div class="container unit-detail-container">
       
       <!-- Back Link & Header info -->
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; flex-wrap: wrap; gap: 14px;">
+      <div class="unit-top-actions" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; flex-wrap: wrap; gap: 14px;">
         <a href="family_units.html" class="btn btn-outline-gold btn-sm">
           <i class="fa-solid fa-arrow-left"></i> Back to Family Units Directory
         </a>
@@ -504,7 +501,7 @@ def generate_unit_html(filename, meta, parsed_data):
           </div>
           <div style="text-align: center; margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--color-border-warm);">
             <h4 style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--color-brown-dark); margin: 0;">{en_name}</h4>
-            <span style="font-size: 0.88rem; color: var(--color-gold-muted); font-weight: 600;">{ml_num} &bull; {ml_name}</span>
+            <span class="unit-card-subtitle"><span class="unit-num-nobr">{ml_num}</span> &bull; {ml_name}</span>
           </div>
         </div>
 
@@ -517,7 +514,7 @@ def generate_unit_html(filename, meta, parsed_data):
       {members_html}
 
       <!-- Quick Access Cards -->
-      <div style="margin-top: 60px;">
+      <div class="unit-quick-nav" style="margin-top: 60px;">
         <div class="section-header text-center" style="margin-bottom: 28px;">
           <div class="section-tag"><i class="fa-solid fa-star text-gold"></i> വേഗത്തിലുള്ള ലിങ്കുകൾ</div>
           <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-brown-dark);">Quick Navigation</h3>
@@ -547,24 +544,6 @@ def generate_unit_html(filename, meta, parsed_data):
   </section>
 
 {get_shared_footer()}
-
-  <script>
-    function filterMembers() {{
-      var input = document.getElementById("memberSearch");
-      var filter = input.value.toUpperCase();
-      var table = document.getElementById("membersTable");
-      var tr = table.getElementsByClassName("member-row");
-
-      for (var i = 0; i < tr.length; i++) {{
-        var text = tr[i].textContent || tr[i].innerText;
-        if (text.toUpperCase().indexOf(filter) > -1) {{
-          tr[i].style.display = "";
-        }} else {{
-          tr[i].style.display = "none";
-        }}
-      }}
-    }}
-  </script>
 </body>
 </html>
 """

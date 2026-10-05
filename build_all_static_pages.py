@@ -1,4 +1,4 @@
-﻿import os
+import os
 from templates_base import get_shared_header, get_shared_footer
 
 def render_html_page(filename, title, active_nav, body_content, meta_desc=""):
@@ -1027,14 +1027,14 @@ def build_administration():
           </div>
         </div>
 
-        <!-- Bishop Bosco Puthur -->
+        <!-- Bishop Joseph Pamplany -->
         <div class="profile-card">
           <div class="profile-img-box">
-            <img src="images/bosco-puthur.jpg" alt="Mar Bosco Puthur">
+            <img src="images/Pamplany.jpg" alt="Mar Joseph Pamplany">
           </div>
           <div class="profile-body">
             <span class="profile-role">Apostolic Administrator</span>
-            <h3 class="profile-name">Mar Bosco Puthur</h3>
+            <h3 class="profile-name">Mar Joseph Pamplany</h3>
             <p class="profile-desc">Apostolic Administrator, Major Archdiocese of Ernakulam-Angamaly.</p>
           </div>
         </div>
@@ -1062,11 +1062,11 @@ def build_administration():
         <!-- Assistant Vicar -->
         <div class="profile-card">
           <div class="profile-img-box">
-            <img src="images/f2.jpg" alt="Fr. Jins Njanakkal - Saha Vicar">
+            <img src="images/Rojin.png" alt="Fr. Joseph Rojin Chavalekad - Saha Vicar">
           </div>
           <div class="profile-body">
             <span class="profile-role">Saha Vicar</span>
-            <h4 class="profile-name">Fr. Jins Njanakkal</h4>
+            <h4 class="profile-name">Fr. Joseph Rojin Chavalekad</h4>
             <p class="profile-desc">Assistant Vicar, Holy Cross Forane Church</p>
           </div>
         </div>
@@ -1074,7 +1074,7 @@ def build_administration():
         <!-- Trustee 1 -->
         <div class="profile-card">
           <div class="profile-img-box">
-            <img src="images/thomas.jpg" alt="Thomas M P - Kaikkaran">
+            <img src="images/JOMON DEVASSY OLIYAPPURAM.jpeg" alt="Thomas M P - Kaikkaran">
           </div>
           <div class="profile-body">
             <span class="profile-role">കൈക്കാരൻ (Trustee)</span>
@@ -1086,7 +1086,7 @@ def build_administration():
         <!-- Trustee 2 -->
         <div class="profile-card">
           <div class="profile-img-box">
-            <img src="images/roy.jpg" alt="Roy Thottakkara - Kaikkaran">
+            <img src="images/jose alukas.png" alt="Roy Thottakkara - Kaikkaran">
           </div>
           <div class="profile-body">
             <span class="profile-role">കൈക്കാരൻ (Trustee)</span>
