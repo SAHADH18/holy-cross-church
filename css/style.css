@@ -6590,7 +6590,7 @@ textarea.form-control {
   display: grid;
   grid-template-columns: 420px 1fr;
   gap: 36px;
-  align-items: start;
+  align-items: stretch;
   margin-bottom: 48px;
 }
 
@@ -6598,28 +6598,31 @@ textarea.form-control {
   background: var(--color-white);
   border: 1.5px solid var(--color-gold-border);
   border-radius: var(--radius-md);
-  padding: 14px;
+  padding: 16px;
   box-shadow: 0 10px 30px rgba(48, 37, 29, 0.08);
-  position: sticky;
-  top: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .unit-image-wrapper {
   border-radius: var(--radius-sm);
   overflow: hidden;
   background: transparent;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
   width: 100%;
-  height: auto;
-  min-height: auto;
-  max-height: none;
+  min-height: 0;
 }
 
 .unit-image-wrapper img {
   width: 100%;
-  height: auto;
+  height: 100%;
   max-height: none;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
   border-radius: var(--radius-sm);
   transition: transform 0.4s ease;
@@ -6685,6 +6688,10 @@ textarea.form-control {
   border-radius: var(--radius-md);
   padding: 28px;
   box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .committee-table {
@@ -6895,8 +6902,26 @@ textarea.form-control {
     position: static;
     max-width: 500px;
     width: 100%;
+    height: auto;
     margin: 0 auto;
     box-sizing: border-box;
+  }
+
+  .unit-image-wrapper {
+    flex: initial;
+    height: auto;
+  }
+
+  .unit-image-wrapper img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .unit-committee-box {
+    height: auto;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 

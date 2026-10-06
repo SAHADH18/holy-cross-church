@@ -52,10 +52,9 @@ def validate():
             if name and name not in gen_content:
                 all_errors.append(f"[{filename}] Committee member '{name}' ({role}) not found in generated HTML!")
 
-        # 6. Check Members count and sample names in generated HTML
-        for m in orig_members:
-            if m['name'] and m['name'] not in gen_content:
-                all_errors.append(f"[{filename}] Member '{m['name']}' not found in generated HTML!")
+        # 6. Verify Unit Members Directory is completely removed
+        if 'Unit Members Directory' in gen_content or 'unit-members-card' in gen_content or 'unit-members-table' in gen_content:
+            all_errors.append(f"[{filename}] Unit Members Directory section still found in generated HTML!")
 
         # 7. Check Navigation & Breadcrumbs
         if 'family_units.html' not in gen_content:

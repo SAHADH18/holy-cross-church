@@ -1773,27 +1773,6 @@ def build_unit_detail(filename, unit_title, unit_no, img_src, leaders, members):
         </div>
       </div>
 
-      <!-- Members Table -->
-      <div class="section-header" style="margin-bottom: 24px;">
-        <div class="section-tag"><i class="fa-solid fa-users text-gold"></i> കുടുംബാംഗങ്ങൾ</div>
-        <h3 style="font-size: 2rem; color: var(--color-brown-dark);">Unit Members Directory (കുടുംബ യൂണിറ്റ് അംഗങ്ങൾ)</h3>
-      </div>
-
-      <div class="mass-table-wrapper">
-        <table class="unit-table">
-          <thead>
-            <tr>
-              <th style="width: 10%; text-align: center;">ക്രമ നമ്പർ</th>
-              <th style="width: 60%;">പേര് &amp; വീട്ടുപേര്</th>
-              <th style="width: 30%;">ഫോൺ നമ്പർ</th>
-            </tr>
-          </thead>
-          <tbody>
-            {members_rows}
-          </tbody>
-        </table>
-      </div>
-
       <!-- Quick Links Section -->
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 60px;">
         <a href="mass-timing.html" class="quick-card" style="margin: 0;">

@@ -330,8 +330,7 @@ def generate_unit_html(filename, meta, parsed_data):
     # Build Executive Committee HTML
     committee_html = ""
     if committee_rows:
-        committee_html = f"""
-        <div class="unit-committee-box">
+        committee_html = f"""        <div class="unit-committee-box">
           <div class="unit-committee-header">
             <span class="section-tag" style="margin-bottom: 0;"><i class="fa-solid fa-users-gear text-gold"></i> ഭരണസമിതി</span>
             <span class="unit-committee-pill">{ml_num}</span>
@@ -350,95 +349,16 @@ def generate_unit_html(filename, meta, parsed_data):
 """
         committee_html += """            </tbody>
           </table>
-        </div>
-"""
+        </div>"""
     else:
-        committee_html = f"""
-        <div class="unit-committee-box">
+        committee_html = f"""        <div class="unit-committee-box">
           <div class="section-tag"><i class="fa-solid fa-people-roof text-gold"></i> <span class="unit-num-nobr">{ml_num}</span></div>
           <h3 style="font-family: var(--font-serif); font-size: 1.55rem; color: var(--color-brown-dark); margin-bottom: 12px;">{full_display_title}</h3>
           <div class="gold-divider" style="justify-content: flex-start; margin-left: 0; margin-bottom: 16px;"><span class="cross-symbol">✝</span></div>
           <p style="color: var(--color-brown-dark); line-height: 1.8; font-size: 1.05rem;">
             Holy Cross Forane Church Manjapra parish community ward unit active in regular prayer gatherings, spiritual communion, and pastoral support.
           </p>
-        </div>
-"""
-
-    # Build Members Directory HTML
-    members_html = ""
-    if member_rows:
-        members_html = f"""
-      <!-- Members Directory Section -->
-      <div class="unit-members-card">
-        <div class="unit-members-header">
-          <div>
-            <div class="section-tag" style="margin-bottom: 4px;"><i class="fa-solid fa-users text-gold"></i> കുടുംബാംഗങ്ങൾ</div>
-            <h3 class="unit-members-title">
-              <span class="unit-members-title-text">Unit Members Directory</span>
-              <span class="unit-member-count">({len(member_rows)} കുടുംബങ്ങൾ)</span>
-            </h3>
-          </div>
-          <div>
-            <a href="family_units.html" class="btn btn-outline-gold btn-sm">
-              <i class="fa-solid fa-arrow-left"></i> All Family Units
-            </a>
-          </div>
-        </div>
-
-        <div class="unit-table-container">
-          <table class="unit-members-table" id="membersTable">
-            <thead>
-              <tr>
-                <th style="width: 80px; text-align: center;">ക്രമ നമ്പർ<br><span style="font-size: 0.76rem; font-weight: 500; text-transform: none; color: var(--color-text-muted);">(Sl. No)</span></th>
-                <th>പേര് &amp; വീട്ടുപേര്<br><span style="font-size: 0.76rem; font-weight: 500; text-transform: none; color: var(--color-text-muted);">(Name &amp; Family Name)</span></th>
-                <th style="width: 200px; text-align: right;">ഫോൺ നമ്പർ<br><span style="font-size: 0.76rem; font-weight: 500; text-transform: none; color: var(--color-text-muted);">(Phone Number)</span></th>
-              </tr>
-            </thead>
-            <tbody>
-"""
-        for m in member_rows:
-            sl = html.escape(m['slno'])
-            nm = html.escape(m['name'])
-            ph = m['phone'].strip()
-            
-            # Format phone
-            if ph and ph != '-':
-                # Clean phone digits for tel link
-                tel_clean = re.sub(r'[^0-9+]', '', ph)
-                if len(tel_clean) in (7, 8):
-                    tel_href = f"0484{tel_clean}"
-                else:
-                    tel_href = tel_clean
-                ph_html = f'<a href="tel:{tel_href}"><i class="fa-solid fa-phone text-gold" style="font-size: 0.75rem;"></i> {html.escape(ph)}</a>'
-            else:
-                ph_html = '<span class="member-no-phone" style="color: var(--color-text-muted);">—</span>'
-
-            members_html += f"""              <tr class="member-row">
-                <td class="member-slno">{sl}</td>
-                <td class="member-name">{nm}</td>
-                <td class="member-phone">{ph_html}</td>
-              </tr>
-"""
-        members_html += """            </tbody>
-          </table>
-        </div>
-      </div>
-"""
-    else:
-        members_html = f"""
-      <div class="unit-members-card" style="text-align: center; padding: 40px 20px;">
-        <i class="fa-solid fa-people-roof text-gold" style="font-size: 2.5rem; margin-bottom: 16px;"></i>
-        <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--color-brown-dark); margin-bottom: 8px;">
-          {full_display_title}
-        </h3>
-        <p style="color: var(--color-text-muted); max-width: 500px; margin: 0 auto 24px;">
-          For unit prayer meeting schedules and family coordinator contact details, please get in touch with the parish office.
-        </p>
-        <a href="family_units.html" class="btn btn-outline-gold">
-          <i class="fa-solid fa-arrow-left"></i> Back to Family Units Directory
-        </a>
-      </div>
-"""
+        </div>"""
 
     # Active page identifier
     active_slug = "family_units"
@@ -499,19 +419,14 @@ def generate_unit_html(filename, meta, parsed_data):
           <div class="unit-image-wrapper">
             <img src="{img_path}" alt="{full_display_title}" onerror="this.src='images/holy_cross_church_manjapra.jpg'">
           </div>
-          <div style="text-align: center; margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--color-border-warm);">
+          <div style="text-align: center; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--color-border-warm);">
             <h4 style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--color-brown-dark); margin: 0;">{en_name}</h4>
             <span class="unit-card-subtitle"><span class="unit-num-nobr">{ml_num}</span> &bull; {ml_name}</span>
           </div>
         </div>
 
-        <div>
-          {committee_html}
-        </div>
+{committee_html}
       </div>
-
-      <!-- Members Section -->
-      {members_html}
 
       <!-- Quick Access Cards -->
       <div class="unit-quick-nav" style="margin-top: 60px;">
