@@ -29,6 +29,9 @@ def get_shared_header(active_page="home"):
       </div>
       <div class="top-bar-right">
         <div class="top-bar-item">
+          <a href="history.html" class="top-bar-badge" style="background: var(--color-white); border-color: var(--color-gold);"><i class="fa-solid fa-church text-gold"></i> Marian Pilgrim Center</a>
+        </div>
+        <div class="top-bar-item">
           <a href="parish_bulletin.html" class="top-bar-badge" style="background: var(--color-white); border-color: var(--color-gold);"><i class="fa-solid fa-book-bible text-gold"></i> Parish Bulletin</a>
         </div>
       </div>

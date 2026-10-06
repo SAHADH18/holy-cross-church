@@ -75,7 +75,7 @@ body {
   color: var(--color-brown-dark);
   line-height: 1.8;
   overflow-x: clip;
-  padding-top: 78px;
+  padding-top: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -328,12 +328,103 @@ h6 {
 
 /* --- Top Utility Bar --- */
 .top-bar {
-  display: none;
+  background-color: var(--color-cream-warm);
+  border-bottom: 1px solid var(--color-gold-border-subtle);
+  color: var(--color-brown-dark);
+  font-size: 0.82rem;
+  padding: 8px 0;
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+}
+
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: nowrap;
+}
+
+.top-bar-left,
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+}
+
+.top-bar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+.top-bar-item i {
+  color: var(--color-gold-muted);
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.top-bar-item a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-normal);
+}
+
+.top-bar-item a:hover {
+  color: var(--color-gold-muted);
+}
+
+.top-bar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-white);
+  border: 1px solid var(--color-gold-border);
+  color: var(--color-brown-dark);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+  line-height: 1.4;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.top-bar-badge:hover {
+  background: var(--color-champagne-primary);
+  border-color: var(--color-gold);
+  color: var(--color-brown-dark);
+}
+
+@media (max-width: 1200px) {
+  .top-bar-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .top-bar-left,
+  .top-bar-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .top-bar-item {
+    white-space: normal;
+    text-align: center;
+  }
 }
 
 /* --- Main Header & Navigation --- */
 .header-main {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
