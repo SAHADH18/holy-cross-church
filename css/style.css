@@ -2514,6 +2514,26 @@ textarea.form-control {
   background: var(--color-gold);
 }
 
+.footer-church-info .church-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  margin-bottom: 18px;
+}
+
+.footer-church-info .church-logo-img {
+  display: none !important;
+}
+
+.footer-church-info .church-brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
 .footer-church-info p {
   font-size: 0.94rem;
   line-height: 1.8;
@@ -3499,6 +3519,28 @@ textarea.form-control {
 
 .homepage-news-card:hover .homepage-news-figure img {
   transform: scale(1.04);
+}
+
+/* Portrait Death Announcement Fitting */
+.death-news-figure {
+  background: radial-gradient(ellipse at center, #FFFDF9 20%, #EFE1CC 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.death-news-portrait {
+  object-fit: contain !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-position: center !important;
+  filter: drop-shadow(0 4px 14px rgba(48, 37, 29, 0.12));
+  transition: transform 0.45s ease !important;
+}
+
+.homepage-news-card:hover .death-news-portrait,
+.dynamic-news-card:hover .death-news-portrait {
+  transform: scale(1.03) !important;
 }
 
 .homepage-news-body {
@@ -6987,11 +7029,11 @@ textarea.form-control {
 }
 
 .unit-stat-value {
-  font-family: var(--font-serif);
-  font-size: 1.45rem;
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--color-brown-dark, #30251D);
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
 .unit-committee-header {

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -204,16 +204,54 @@
       <div class="dynamic-news-container">
         <div id="news-grid" class="dynamic-news-grid">
           
-          <!-- Current Dynamic News Card (Original Content: Source of Truth) -->
+          <!-- News Card 1: Christmas Tree Competition -->
           <article class="dynamic-news-card">
             <div class="dynamic-news-card-img-box">
-              <img src="images/offer/footer.jpg" alt="Holy Cross Church Manjapra News Updates" loading="lazy">
+              <img src="images/offer/footer.jpg" alt="Christmas Tree Competition - Holy Cross Church Manjapra" loading="lazy">
             </div>
             <div class="dynamic-news-card-body">
-              <h3 class="dynamic-news-title">News Updates</h3>
+              <div class="dynamic-news-meta">
+                <span class="dynamic-news-category">NEWS</span>
+              </div>
+              <h3 class="dynamic-news-title">Christmas Tree Competition</h3>
               <p class="dynamic-news-desc">
-                From 19th to 28th november celebrating the feast of St.mary.On December 24th there will be a christmas tree competition.
+                From 19th to 28th november celebrating the feast of St.mary. On December 24th there will be a christmas tree competition.
               </p>
+              <a href="#" class="dynamic-news-link">READ MORE <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- News Card 2: Death Announcement (മരണ അറിയിപ്പ്) -->
+          <article class="dynamic-news-card">
+            <div class="dynamic-news-card-img-box death-news-figure">
+              <img src="images/baby_kolattukudy.jpg" alt="മരണ അറിയിപ്പ് - K.J ബേബി കൊളാട്ടുകുടി" loading="lazy" class="death-news-portrait">
+            </div>
+            <div class="dynamic-news-card-body">
+              <div class="dynamic-news-meta">
+                <span class="dynamic-news-category">NEWS</span>
+              </div>
+              <h3 class="dynamic-news-title">മരണ അറിയിപ്പ്</h3>
+              <p class="dynamic-news-desc">
+                K.J ബേബി (83) കൊളാട്ടുകുടി<br>സംസ്കാരം: 07.10.2026 ബുധൻ 3.30 pm ന് മഞ്ഞപ്ര ഹോളി ക്രോസ് ഫൊറോന പള്ളിയിൽ.
+              </p>
+              <a href="#" class="dynamic-news-link">READ MORE <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- News Card 3: Parish Community Gathering -->
+          <article class="dynamic-news-card">
+            <div class="dynamic-news-card-img-box">
+              <img src="images/gallery/2025/3.jpg" alt="Parish Community Gathering - Holy Cross Church Manjapra" loading="lazy">
+            </div>
+            <div class="dynamic-news-card-body">
+              <div class="dynamic-news-meta">
+                <span class="dynamic-news-category">NEWS</span>
+              </div>
+              <h3 class="dynamic-news-title">Parish Community Gathering</h3>
+              <p class="dynamic-news-desc">
+                A special gathering of our parish community brought families and parishioners together for a meaningful time of fellowship, prayer and celebration.
+              </p>
+              <a href="#" class="dynamic-news-link">READ MORE <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </article>
 
@@ -395,12 +433,32 @@
     const initialNewsData = [
       {
         id: 1,
-        title: "News Updates",
-        description: "From 19th to 28th november celebrating the feast of St.mary.On December 24th there will be a christmas tree competition.",
+        title: "Christmas Tree Competition",
+        description: "From 19th to 28th november celebrating the feast of St.mary. On December 24th there will be a christmas tree competition.",
         image: "images/offer/footer.jpg",
         date: "",
-        category: "",
-        link: ""
+        category: "NEWS",
+        link: "#"
+      },
+      {
+        id: 2,
+        title: "മരണ അറിയിപ്പ്",
+        description: "K.J ബേബി (83) കൊളാട്ടുകുടി<br>സംസ്കാരം: 07.10.2026 ബുധൻ 3.30 pm ന് മഞ്ഞപ്ര ഹോളി ക്രോസ് ഫൊറോന പള്ളിയിൽ.",
+        image: "images/baby_kolattukudy.jpg",
+        figureClass: "death-news-figure",
+        imageClass: "death-news-portrait",
+        date: "",
+        category: "NEWS",
+        link: "#"
+      },
+      {
+        id: 3,
+        title: "Parish Community Gathering",
+        description: "A special gathering of our parish community brought families and parishioners together for a meaningful time of fellowship, prayer and celebration.",
+        image: "images/gallery/2025/3.jpg",
+        date: "",
+        category: "NEWS",
+        link: "#"
       }
     ];
 
@@ -425,9 +483,12 @@
       }
 
       container.innerHTML = items.map(item => {
+        const figClass = item.figureClass ? ` ${item.figureClass}` : '';
+        const imgClass = item.imageClass ? ` class="${item.imageClass}"` : '';
+        const styleAttr = item.imageStyle ? ` style="${item.imageStyle}"` : '';
         const imageHtml = item.image 
-          ? `<div class="dynamic-news-card-img-box">
-               <img src="${item.image}" alt="${item.title || 'Parish News'}" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'dynamic-news-img-placeholder\\'><i class=\\'fa-solid fa-church\\'></i><span>Holy Cross Church</span></div>';">
+          ? `<div class="dynamic-news-card-img-box${figClass}">
+               <img src="${item.image}" alt="${item.title || 'Parish News'}" loading="lazy"${imgClass}${styleAttr} onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'dynamic-news-img-placeholder\\'><i class=\\'fa-solid fa-church\\'></i><span>Holy Cross Church</span></div>';">
              </div>`
           : `<div class="dynamic-news-card-img-box">
                <div class="dynamic-news-img-placeholder">
