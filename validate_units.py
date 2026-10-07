@@ -56,11 +56,11 @@ def validate():
         if 'Unit Members Directory' in gen_content or 'unit-members-card' in gen_content or 'unit-members-table' in gen_content:
             all_errors.append(f"[{filename}] Unit Members Directory section still found in generated HTML!")
 
-        # 7. Check Total Family and Total Unit Members stats
-        expected_family_html = f'<span class="unit-stat-label">Total Family</span>\n                <span class="unit-stat-value">{len(orig_members)}</span>'
+        # 7. Check Total Families and Total Unit Members stats
+        expected_family_html = f'<span class="unit-stat-label">Total Families</span>\n                <span class="unit-stat-value">{len(orig_members)}</span>'
         expected_members_html = f'<span class="unit-stat-label">Total Unit Members</span>\n                <span class="unit-stat-value">120</span>'
         if expected_family_html not in gen_content:
-            all_errors.append(f"[{filename}] Total Family count {len(orig_members)} not found or malformed!")
+            all_errors.append(f"[{filename}] Total Families count {len(orig_members)} not found or malformed!")
         if expected_members_html not in gen_content:
             all_errors.append(f"[{filename}] Total Unit Members count 120 not found or malformed!")
 

@@ -425,7 +425,7 @@ def generate_unit_html(filename, meta, parsed_data):
             <span class="unit-card-subtitle"><span class="unit-num-nobr">{ml_num}</span> &bull; {ml_name}</span>
             <div class="unit-stats-grid">
               <div class="unit-stat-item">
-                <span class="unit-stat-label">Total Family</span>
+                <span class="unit-stat-label">Total Families</span>
                 <span class="unit-stat-value">{total_unit_members}</span>
               </div>
               <div class="unit-stat-item">
