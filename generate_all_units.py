@@ -326,6 +326,7 @@ def generate_unit_html(filename, meta, parsed_data):
     
     committee_rows = parsed_data['committee'] if parsed_data else []
     member_rows = parsed_data['members'] if parsed_data else []
+    total_unit_members = len(member_rows)
 
     # Build Executive Committee HTML
     committee_html = ""
@@ -419,9 +420,19 @@ def generate_unit_html(filename, meta, parsed_data):
           <div class="unit-image-wrapper">
             <img src="{img_path}" alt="{full_display_title}" onerror="this.src='images/holy_cross_church_manjapra.jpg'">
           </div>
-          <div style="text-align: center; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--color-border-warm);">
-            <h4 style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--color-brown-dark); margin: 0;">{en_name}</h4>
+          <div class="unit-card-info">
+            <h4 class="unit-card-name">{en_name}</h4>
             <span class="unit-card-subtitle"><span class="unit-num-nobr">{ml_num}</span> &bull; {ml_name}</span>
+            <div class="unit-stats-grid">
+              <div class="unit-stat-item">
+                <span class="unit-stat-label">Family</span>
+                <span class="unit-stat-value">{unit_num}</span>
+              </div>
+              <div class="unit-stat-item">
+                <span class="unit-stat-label">Total Unit Members</span>
+                <span class="unit-stat-value">{total_unit_members}</span>
+              </div>
+            </div>
           </div>
         </div>
 

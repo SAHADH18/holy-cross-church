@@ -56,13 +56,21 @@ def validate():
         if 'Unit Members Directory' in gen_content or 'unit-members-card' in gen_content or 'unit-members-table' in gen_content:
             all_errors.append(f"[{filename}] Unit Members Directory section still found in generated HTML!")
 
-        # 7. Check Navigation & Breadcrumbs
+        # 7. Check Family Number and Total Unit Members stats
+        expected_family_html = f'<span class="unit-stat-label">Family</span>\n                <span class="unit-stat-value">{unit_num}</span>'
+        expected_members_html = f'<span class="unit-stat-label">Total Unit Members</span>\n                <span class="unit-stat-value">{len(orig_members)}</span>'
+        if expected_family_html not in gen_content:
+            all_errors.append(f"[{filename}] Family number {unit_num} not found or malformed!")
+        if expected_members_html not in gen_content:
+            all_errors.append(f"[{filename}] Total Unit Members count {len(orig_members)} not found or malformed!")
+
+        # 8. Check Navigation & Breadcrumbs
         if 'family_units.html' not in gen_content:
             all_errors.append(f"[{filename}] Back link to family_units.html missing!")
         if f'<span>{en_name}</span>' not in gen_content:
             all_errors.append(f"[{filename}] Breadcrumb for '{en_name}' missing!")
 
-        # 8. Check Footer credit
+        # 9. Check Footer credit
         if 'Powered by' not in gen_content or 'cryoflametechnologies.com' not in gen_content:
             all_errors.append(f"[{filename}] Footer powered by Cryoflame missing!")
 

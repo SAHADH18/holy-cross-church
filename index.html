@@ -375,42 +375,143 @@
     </div>
   </section>
 
-  <!-- 5. NEWS UPDATES SECTION -->
-  <section class="section news-showcase-section">
-    <div class="container">
-      <div class="section-header text-center">
-        <h1 class="section-title">News <span class="text-gold">Updates</span></h1>
+  <!-- 4.5 NEW AUTO-SCROLLING PHOTO GALLERY / CHURCH MOMENTS SECTION -->
+  <section class="section home-gallery-section" aria-label="Church Moments Photo Gallery">
+    <div class="container text-center">
+      <div class="section-header text-center" style="margin-bottom: 0;">
+        <h2 class="section-title">CHURCH <span class="text-gold">MOMENTS</span></h2>
         <div class="gold-divider">
           <span class="cross-symbol">✝</span>
         </div>
+        <p class="section-subtitle" style="max-width: 650px; margin: 0 auto; color: var(--color-brown-dark); font-family: var(--font-serif-sub); font-size: 1.15rem; font-style: italic;">
+          A glimpse of our faith, community and memorable celebrations
+        </p>
+      </div>
+    </div>
+
+    <div class="home-gallery-carousel-wrapper">
+      <div class="home-gallery-track">
+        <!-- Set 1 (Original 8 Photos with Alternating Heights) -->
+        <div class="home-gallery-item tall">
+          <img src="images/holy_cross_church_manjapra.jpg" alt="Holy Cross Forane Church Historic Façade" loading="lazy">
+        </div>
+        <div class="home-gallery-item short">
+          <img src="images/banner-2.jpg" alt="Sacred Sanctuary and Main Altar" loading="lazy">
+        </div>
+        <div class="home-gallery-item tall">
+          <img src="images/gallery/2025/1.jpg" alt="Parish Feast Celebration and Sacred Liturgy" loading="lazy">
+        </div>
+        <div class="home-gallery-item short">
+          <img src="images/banner-3.jpg" alt="Illuminated Church Architecture at Night" loading="lazy">
+        </div>
+        <div class="home-gallery-item tall">
+          <img src="images/gallery/2025/3.jpg" alt="Parishioners and Community Gathering" loading="lazy">
+        </div>
+        <div class="home-gallery-item short">
+          <img src="images/banner-1.jpg" alt="Church Front Elevation and Belfry" loading="lazy">
+        </div>
+        <div class="home-gallery-item tall">
+          <img src="images/gallery/2025/5.jpg" alt="Solemn Parish Procession and Devotion" loading="lazy">
+        </div>
+        <div class="home-gallery-item short">
+          <img src="images/holy/Mariyapuram Chapel.jpg" alt="Mariyapuram Chapel of Holy Cross Parish" loading="lazy">
+        </div>
+
+        <!-- Set 2 (Duplicate for Seamless Infinite Loop) -->
+        <div class="home-gallery-item tall" aria-hidden="true">
+          <img src="images/holy_cross_church_manjapra.jpg" alt="Holy Cross Forane Church Historic Façade" loading="lazy">
+        </div>
+        <div class="home-gallery-item short" aria-hidden="true">
+          <img src="images/banner-2.jpg" alt="Sacred Sanctuary and Main Altar" loading="lazy">
+        </div>
+        <div class="home-gallery-item tall" aria-hidden="true">
+          <img src="images/gallery/2025/1.jpg" alt="Parish Feast Celebration and Sacred Liturgy" loading="lazy">
+        </div>
+        <div class="home-gallery-item short" aria-hidden="true">
+          <img src="images/banner-3.jpg" alt="Illuminated Church Architecture at Night" loading="lazy">
+        </div>
+        <div class="home-gallery-item tall" aria-hidden="true">
+          <img src="images/gallery/2025/3.jpg" alt="Parishioners and Community Gathering" loading="lazy">
+        </div>
+        <div class="home-gallery-item short" aria-hidden="true">
+          <img src="images/banner-1.jpg" alt="Church Front Elevation and Belfry" loading="lazy">
+        </div>
+        <div class="home-gallery-item tall" aria-hidden="true">
+          <img src="images/gallery/2025/5.jpg" alt="Solemn Parish Procession and Devotion" loading="lazy">
+        </div>
+        <div class="home-gallery-item short" aria-hidden="true">
+          <img src="images/holy/Mariyapuram Chapel.jpg" alt="Mariyapuram Chapel of Holy Cross Parish" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center" style="margin-top: 14px;">
+      <a href="gallery.html" class="btn btn-primary"><i class="fa-solid fa-images"></i> VIEW FULL GALLERY <i class="fa-solid fa-arrow-right" style="margin-left: 6px;"></i></a>
+    </div>
+  </section>
+
+  <!-- 5. NEWS UPDATES SECTION -->
+  <section class="section news-showcase-section" aria-label="News and Parish Updates">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">NEWS <span class="text-gold">UPDATES</span></h2>
+        <div class="gold-divider">
+          <span class="cross-symbol">✝</span>
+        </div>
+        <p class="section-subtitle" style="max-width: 650px; margin: 0 auto; color: var(--color-brown-dark); font-family: var(--font-serif-sub); font-size: 1.15rem; font-style: italic;">
+          Stay connected with the latest news and happenings from our parish.
+        </p>
       </div>
 
-      <div class="news-showcase-grid">
-        <!-- News Spotlight Card -->
-        <article class="news-spotlight-card">
-          <div class="news-spotlight-figure">
-            <img src="images/offer/footer.jpg" alt="News Updates Holy Cross Church Manjapra">
-            <div class="news-badge-ribbon">News</div>
+      <div class="homepage-news-grid">
+        <!-- CARD 1: EXISTING REAL NEWS (ALWAYS FIRST) -->
+        <article class="homepage-news-card">
+          <div class="homepage-news-figure">
+            <img src="images/offer/footer.jpg" alt="Christmas Tree Competition - Holy Cross Church Manjapra" loading="lazy">
           </div>
-          <div class="news-spotlight-body">
-            <h2 class="news-spotlight-title">News Updates</h2>
-            <div class="news-ticker-container">
-              <p class="news-ticker-text">
-                From 19th to 28th november celebrating the feast of St.mary.On December 24th there will be a christmas
-                tree competition.
-              </p>
-            </div>
-            <div style="margin-top: 18px;">
-              <a href="news.html" class="btn btn-outline-gold btn-sm"><i class="fa-solid fa-arrow-right"></i> View All
-                News</a>
-            </div>
+          <div class="homepage-news-body">
+            <span class="homepage-news-badge">NEWS</span>
+            <h3 class="homepage-news-title">Christmas Tree Competition</h3>
+            <p class="homepage-news-desc">
+              From 19th to 28th november celebrating the feast of St.mary. On December 24th there will be a christmas tree competition.
+            </p>
+            <a href="news.html" class="homepage-news-link">READ MORE <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </article>
 
-        <!-- Side Image Box -->
-        <div class="news-side-card">
-          <img src="images/offer/offer-imag-2.jpg" alt="Parish News &amp; Celebrations">
-        </div>
+        <!-- CARD 2: DUMMY NEWS -->
+        <article class="homepage-news-card">
+          <div class="homepage-news-figure">
+            <img src="images/gallery/2025/1.jpg" alt="Parish Feast Celebrations - Holy Cross Church Manjapra" loading="lazy">
+          </div>
+          <div class="homepage-news-body">
+            <span class="homepage-news-badge">NEWS</span>
+            <h3 class="homepage-news-title">Parish Feast Celebrations</h3>
+            <p class="homepage-news-desc">
+              Our parish community came together in prayer and fellowship to celebrate the annual parish feast with faith, devotion and joyful participation.
+            </p>
+            <a href="news.html" class="homepage-news-link">READ MORE <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- CARD 3: DUMMY NEWS -->
+        <article class="homepage-news-card">
+          <div class="homepage-news-figure">
+            <img src="images/gallery/2025/3.jpg" alt="Parish Community Gathering - Holy Cross Church Manjapra" loading="lazy">
+          </div>
+          <div class="homepage-news-body">
+            <span class="homepage-news-badge">NEWS</span>
+            <h3 class="homepage-news-title">Parish Community Gathering</h3>
+            <p class="homepage-news-desc">
+              A special gathering of our parish community brought families and parishioners together for a meaningful time of fellowship, prayer and celebration.
+            </p>
+            <a href="news.html" class="homepage-news-link">READ MORE <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center" style="margin-top: 40px;">
+        <a href="news.html" class="btn btn-primary">VIEW ALL NEWS <i class="fa-solid fa-arrow-right" style="margin-left: 6px;"></i></a>
       </div>
     </div>
   </section>
