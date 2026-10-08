@@ -8006,12 +8006,13 @@ textarea.form-control {
 .mass-schedule-table-wrap {
   width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mass-schedule-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 640px;
+  min-width: 760px;
 }
 
 .mass-schedule-table thead {
@@ -8019,14 +8020,39 @@ textarea.form-control {
 }
 
 .mass-schedule-table th {
-  padding: 18px 24px;
+  padding: 16px 18px;
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: var(--color-brown-dark);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   border-bottom: 2px solid var(--color-gold);
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.timing-mass-header {
+  text-align: center !important;
+  letter-spacing: 0.12em;
+}
+
+.timing-mass-header-inner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.timing-mass-header-inner::before,
+.timing-mass-header-inner::after {
+  content: '';
+  flex: 1;
+  max-width: 140px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(200, 161, 90, 0.55), transparent);
 }
 
 .mass-schedule-table tbody tr {
@@ -8047,215 +8073,59 @@ textarea.form-control {
 }
 
 .mass-schedule-table td {
-  padding: 18px 24px;
-  vertical-align: middle;
-  font-size: 1.02rem;
+  padding: 16px 18px;
+  vertical-align: top;
+  font-size: 0.96rem;
   color: var(--color-brown-dark);
 }
 
 .timing-day-cell {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--color-brown-dark);
   white-space: nowrap;
 }
 
-.timing-time-cell {
-  color: var(--color-brown-dark);
-  font-weight: 600;
-}
-
 .timing-time-pill {
   display: inline-block;
-  background: rgba(200, 161, 90, 0.1);
+  background: rgba(200, 161, 90, 0.12);
   border: 1px solid rgba(200, 161, 90, 0.35);
   color: var(--color-brown-dark);
   font-weight: 700;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.96rem;
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 0.88rem;
   letter-spacing: 0.02em;
+  margin-bottom: 4px;
 }
 
-.timing-prayers-cell {
-  font-weight: 600;
+.timing-prayer-text {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: 1.55;
   color: var(--color-brown-dark);
-  line-height: 1.5;
+  font-weight: 500;
+  margin-top: 5px;
 }
 
-/* Mobile Responsive Transformation: 3-Column Table -> Stacked Self-Contained Cards */
+.timing-empty-cell {
+  color: #B5A898;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.table-scroll-hint {
+  display: none;
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+  margin-bottom: 10px;
+  text-align: right;
+}
+
 @media (max-width: 768px) {
-  .mass-schedule-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-bottom: 36px !important;
-    box-sizing: border-box !important;
-  }
-
-  .mass-schedule-card {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    overflow: visible !important;
-  }
-
-  .mass-schedule-table-wrap {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow: visible !important;
-    box-sizing: border-box !important;
-  }
-
-  .mass-schedule-table {
-    display: block !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    border-collapse: separate !important;
-    box-sizing: border-box !important;
-  }
-
-  .mass-schedule-table thead {
-    display: none !important;
-  }
-
-  .mass-schedule-table tbody {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 16px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  .mass-schedule-table tbody tr {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    background: #FFFFFF !important;
-    border: 1.5px solid var(--color-gold-border) !important;
-    border-radius: 12px !important;
-    padding: 18px 18px 20px !important;
-    box-shadow: 0 6px 22px rgba(48, 37, 29, 0.06) !important;
-    box-sizing: border-box !important;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
-  }
-
-  .mass-schedule-table tbody tr:hover {
-    background-color: #FFFFFF !important;
-    border-color: var(--color-gold) !important;
-    box-shadow: 0 10px 28px rgba(200, 161, 90, 0.2) !important;
-  }
-
-  .mass-schedule-table td {
-    display: block !important;
-    width: 100% !important;
-    padding: 0 !important;
-    border: none !important;
-    box-sizing: border-box !important;
-  }
-
-  .timing-day-cell {
-    font-family: var(--font-serif) !important;
-    font-size: 1.35rem !important;
-    font-weight: 700 !important;
-    color: var(--color-brown-dark) !important;
-    line-height: 1.25 !important;
-    border-bottom: 1px solid var(--color-border-warm) !important;
-    padding-bottom: 10px !important;
-    margin-bottom: 12px !important;
-    white-space: normal !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-  }
-
-  .timing-day-cell::before {
-    content: '✝';
-    color: var(--color-gold);
-    font-size: 0.95rem;
-  }
-
-  .timing-time-cell {
-    margin-bottom: 12px !important;
-  }
-
-  .timing-time-cell::before {
-    content: 'TIME';
+  .table-scroll-hint {
     display: block;
-    font-family: var(--font-sans);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--color-gold-muted);
-    margin-bottom: 6px;
-  }
-
-  .timing-time-pill {
-    display: inline-flex !important;
-    align-items: center !important;
-    flex-wrap: wrap !important;
-    gap: 6px !important;
-    padding: 7px 14px !important;
-    font-size: 0.96rem !important;
-    font-weight: 700 !important;
-    background: rgba(200, 161, 90, 0.12) !important;
-    border: 1px solid rgba(200, 161, 90, 0.35) !important;
-    border-radius: 8px !important;
-    color: var(--color-brown-dark) !important;
-    max-width: 100% !important;
-    word-break: break-word !important;
-  }
-
-  .timing-prayers-cell {
-    font-size: 1rem !important;
-    line-height: 1.55 !important;
-    color: var(--color-brown-dark) !important;
-    word-break: break-word !important;
-    white-space: normal !important;
-  }
-
-  .timing-prayers-cell::before {
-    content: 'PRAYERS & DEVOTIONS';
-    display: block;
-    font-family: var(--font-sans);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--color-gold-muted);
-    margin-top: 4px;
-    margin-bottom: 5px;
-  }
-}
-
-@media (max-width: 480px) {
-  .mass-schedule-table tbody tr {
-    padding: 16px 14px 18px !important;
-  }
-
-  .timing-day-cell {
-    font-size: 1.22rem !important;
-  }
-
-  .timing-time-pill {
-    font-size: 0.9rem !important;
-    padding: 6px 12px !important;
-  }
-
-  .timing-prayers-cell {
-    font-size: 0.95rem !important;
-  }
-}
-
-@media (max-width: 360px) {
-  .mass-schedule-table tbody tr {
-    padding: 14px 12px 16px !important;
-  }
-
-  .timing-day-cell {
-    font-size: 1.15rem !important;
   }
 }
 
